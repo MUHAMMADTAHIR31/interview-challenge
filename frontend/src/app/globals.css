@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light mode defaults */
+:root {
+  --background: #f9fafb;
+  --foreground: #1f2937;
+}
+
+/* Apply variables globally */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", sans-serif;
+  @apply antialiased;
+}
+
+/* Ensure headings and bold text have contrast */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+/* Inputs, buttons, forms baseline */
+input,
+select,
+textarea,
+button {
+  @apply rounded border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+/* Button base */
+button {
+  @apply font-medium transition duration-150 ease-in-out;
+}
